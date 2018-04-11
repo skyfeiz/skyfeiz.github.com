@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原油生产</title>
+	<script src="libs/TweenMax.min.js"></script>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/p2.css">
+</head>
+<body>
+	<div class="root">
+		<header class="clearfix">
+			<div class="logobox fl">
+				<span class="logo fl"></span>
+				<h1 class="fl">海外油气生产经营辅助决策系统</h1>
+			</div>
+			<div class="fr pt25">
+				<p class="userbox fl">
+					<span>欢迎 :</span>
+					<span>admin</span>
+				</p>
+				<span class="clock fl"></span>
+				<span class="person fl"></span>
+				<span class="logout fl" id="logout"></span>
+			</div>
+		</header>
+		<div class="main" id="main">
+			<div class="middle">
+				<section class="actInfo">
+					<div class="infobox clearfix">
+						<span class="horn fl"></span>
+						<b class="fl">动态信息 : </b>
+						<p class="info1 fl">
+							<span class="fl info_name">上周、日均原油产量</span>
+							<span class="fl info_value">377.59</span>
+							<span class="fl info_unit">千吨</span>
+						</p>
+						<p class="info2 fl">
+							<span class="fl info_name">年累计产油量</span>
+							<span class="fl info_value">367.91</span>
+							<span class="fl info_unit">千吨</span>
+						</p>
+					</div>
+					<span class="pointbg lt"></span>
+					<span class="pointbg rt"></span>
+					<span class="pointbg rb"></span>
+					<span class="pointbg lb"></span>
+				</section>
+				<section class="detailsBox">
+					<div class="lidiv fl">
+						<div class="divleft fl">
+							<p class="div_name">月产油</p>
+							<p class="div_value clearfix">
+								<span class="unit fr">千吨</span>
+								<span class="value fr">-9.68</span>
+							</p>
+							<p class="div_value clearfix">
+								<span class="unit fr">%&nbsp;&nbsp;&nbsp;&nbsp;</span>
+								<span class="value fr">-2.56</span>
+							</p>
+						</div>
+						<div class="divright fl">
+							<div class="conbox">
+								<p class="namebox clearfix">
+									<span class="time fl">6月</span>
+									<span class="name fl">日均产油量</span>
+								</p>
+								<p class="valuebox clearfix">
+									<span class="value fl">377.59</span>
+									<span class="unit fl">千吨</span>
+								</p>
+							</div>
+							<div class="conbox pt40">
+								<p class="namebox clearfix">
+									<span class="time fl">7月</span>
+									<span class="name fl">日均产油量</span>
+								</p>
+								<p class="valuebox clearfix">
+									<span class="value fl">367.91</span>
+									<span class="unit fl">千吨</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="lidiv fl">
+						<div class="divleft fl">
+							<p class="div_name">周产油</p>
+							<p class="div_value clearfix">
+								<span class="unit fr">千吨</span>
+								<span class="value fr">-0.90</span>
+							</p>
+							<p class="div_value clearfix">
+								<span class="unit fr">%&nbsp;&nbsp;&nbsp;&nbsp;</span>
+								<span class="value fr">-0.25</span>
+							</p>
+						</div>
+						<div class="divright fl">
+							<div class="conbox">
+								<p class="namebox clearfix">
+									<span class="time fl">29周</span>
+									<span class="name fl">日均产油量</span>
+								</p>
+								<p class="valuebox clearfix">
+									<span class="value fl">365.95</span>
+									<span class="unit fl">千吨</span>
+								</p>
+							</div>
+							<div class="conbox pt40">
+								<p class="namebox clearfix">
+									<span class="time fl">30周</span>
+									<span class="name fl">日均产油量</span>
+								</p>
+								<p class="valuebox clearfix">
+									<span class="value fl">365.05</span>
+									<span class="unit fl">千吨</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="lidiv fl">
+						<div class="divleft divleft3">
+							<p class="name">年累计产油量</p>
+							<p class="value">77.20</p>
+							<p class="unit">百万吨</p>
+						</div>
+						<div class="divright3" id="chartPi">
+							<p class="c_namebox">计划完成情况</p>
+							<p class="c_valuebox">
+								<span class="value fl">62.08</span>
+								<span class="unit fl">%</span>
+							</p>
+						</div>
+					</div>
+				</section>
+				<section class="chart2box">
+					<div class="titlebox">
+						<p class="charttitle fl">海外勘探公司原油生产运行曲线</p>
+						<span class="chartBtn fr">地区产油</span>
+						<span class="chartBtn active fr">各月日均</span>
+					</div>
+					<div class="chart2" id="chart2"></div>
+				</section>
+			</div>
+			<div class="left">
+				<p class="lefttitle">日均产油量增加最多项目</p>
+				<div class="leftchart" id="leftchart"></div>
+			</div>
+			<div class="right">
+				<p class="lefttitle">日均产油量减少最多项目</p>
+				<div class="rightchart" id="rightchart"></div>
+			</div>
+		</div>
+		<span class="leftbtn" id="leftbtn"></span>
+		<span class="rightbtn" id="rightbtn"></span>
+		<section class="bottomNav">
+			<ul>
+				<li>
+					<a href="javascript:;" class="libox szyd">
+						<p>上周要点</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="libox ktdt">
+						<p>勘探动态</p>
+					</a>
+				</li>
+				<li class="active">
+					<a href="p2.html" class="libox yysc">
+						<p>原油生产</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="libox trqsc">
+						<p>天然气生产</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="libox zjsy">
+						<p>钻井试油</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="libox gdys">
+						<p>管道运输</p>
+					</a>
+				</li>
+				<li>
+					<a href="p6.html" class="libox dmgc">
+						<p>地面工程</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="libox gdgc">
+						<p>管道工程</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="libox lhxs">
+						<p>炼化销售</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="libox gjqyj">
+						<p>国际汽油价</p>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</div>
+<script type="text/javascript" src="js/p2.js"></script></body>
+</html>

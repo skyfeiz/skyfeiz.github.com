@@ -1,0 +1,202 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft yahei", "\5FAE\8F6F\96C5\9ED1", "Tahoma", "Verdana", "Arial", "sans-serif";
+}
+body{
+    width:1920px;
+    height: 1080px;
+    font-size: 16px;
+}
+@font-face{
+    font-family: 'DIN MEDIUM';
+    src:url('../imgs/DIN MEDIUM.TTF');
+}
+p,
+h1,
+ul,
+li, 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+dl,
+dt,
+dd{
+    margin: 0;
+    padding: 0
+}
+ul,
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+input{
+    outline: none;
+}
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.cp{
+    cursor: pointer;
+}
+.pt25{
+    padding-top: 25px;
+}
+.pt40{
+    padding-top: 40px;
+}
+
+
+.root{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(./../imgs/p2/bg1.jpg) #043a64 no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+header{
+    height: 70px;
+    border-bottom: 1px solid rgba(4,133,216,0.3);
+    padding-left: 20px;
+    position: relative;
+    z-index: 10;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+    background: url(../imgs/header/logo.png) no-repeat center;
+}
+h1{
+    height: 70px;
+    line-height: 66px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px #036eff;
+}
+.clock,.person,.logout{
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.clock{
+    margin-left: 30px;
+    margin-right: 26px;
+    background-image: url(../imgs/header/clock.png);
+}
+.person{
+    margin-right: 30px;
+    background-image: url(../imgs/header/person.png);
+}
+.logout{
+    margin-right: 16px;
+    background-image: url(../imgs/header/logout.png);
+}
+.userbox{
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #00eaff;
+}
+
+/* bottom */
+.bottomNav{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -28px;
+    height: 90px;
+    text-align: center;
+    z-index: 10;
+}
+.bottomNav ul{
+    height: 100%;
+    display: inline-block;
+    font-size: 0;
+}
+.bottomNav ul li{
+    width: 150px;
+    height: 100%;
+    margin: 0 5px;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    border: 1px solid #00d8ff;
+    box-shadow: 0 0 20px #007eff inset;
+}
+.bottomNav ul li.active{
+    bottom: 32px;
+    border-color: #ffe600;
+    box-shadow: 0 0 20px #ffe600 inset;
+    background-color: rgba(116,48,2,0.3);
+}
+.bottomNav a.libox{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 150px;
+    height: 100%;
+    background: url(../imgs/header/sprites.png) no-repeat;
+}
+.bottomNav p{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 18px;
+    height: 38px;
+    line-height: 38px;
+    color: #fff;
+    text-align: center;
+}
+.bottomNav a.szyd{
+    background-position: 0 0;
+}
+.bottomNav a.ktdt{
+    background-position: 0 -90px;
+}
+.bottomNav a.yysc{
+    background-position: 0 -180px;
+}
+.bottomNav a.trqsc{
+    background-position: 0 -270px;
+}
+.bottomNav a.zjsy{
+    background-position: 0 -360px;
+}
+.bottomNav a.gdys{
+    background-position: 0 -450px;
+}
+.bottomNav a.dmgc{
+    background-position: 0 -540px;
+}
+.bottomNav a.gdgc{
+    background-position: 0 -630px;
+}
+.bottomNav a.lhxs{
+    background-position: 0 -720px;
+}
+.bottomNav a.gjqyj{
+    background-position: 0 -810px;
+}
