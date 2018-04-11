@@ -8,8 +8,8 @@
 		"bottom":true
 	},
 	"page3":{
-		"header":false,
-		"bottom":false
+		"header":true,
+		"bottom":true
 	},
 	"page4":{
 		"header":true,
