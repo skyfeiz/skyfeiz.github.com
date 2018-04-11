@@ -1,0 +1,454 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: url("../image/bg.jpg") no-repeat;
+    background-size: cover;
+    /*background: black;*/
+}
+
+.light {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /*margin-left: -450px;*/
+    /*margin-top: -539.5px;*/
+    /*width: 900px;*/
+    /*height: 1079px;*/
+    margin-left: -317px;
+    margin-top: -378px;
+    width: 630px;
+    height: 755.3px;
+    /*background: url("../image/earth/light.png") no-repeat;*/
+    background-size: cover;
+}
+
+#container3d {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@font-face{
+    font-family: 'DIN MEDIUM';
+    src:url('../image/DIN MEDIUM.TTF');
+}
+body,
+h2,
+p{
+    padding: 0;
+    margin: 0;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.ff-din{
+    font-family: 'DIN MEDIUM';
+}
+
+div{
+    font-size: 0;
+}
+.opa-show{
+    opacity: 0;
+}
+
+.zdepot-box{
+    position: absolute;
+    cursor: pointer;
+}
+.zleft{
+    height: 960px;
+    position: absolute;
+    left: 88px;
+    top: 50%;
+    transform: translateY(-50%);
+    perspective:150;
+    -webkit-perspective:1500;
+}
+.zleftbox{
+    transform: rotateY(90deg);
+    opacity: 0;
+    transform-origin: left top;
+}
+
+.ztitle{
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    color: #01baff;
+    padding: 0 30px;
+    border-top: 1px solid rgba(69,183,255,0.3);
+    border-bottom: 1px solid rgba(69,183,255,0.3);
+    position: relative;
+}
+.white-point{
+    position: absolute;
+    width: 3px;
+    height: 1px;
+    background-color: #fff;
+}
+.lt{
+    left: 0;
+    top: -1px;
+}
+.rt{
+    right: 0;
+    top: -1px;
+}
+.lb{
+    left: 0;
+    bottom: -1px;
+}
+.rb{
+    right: 0;
+    bottom: -1px;
+}
+
+.border-box{
+    width: 360px;
+    position: absolute;
+    left: 0;
+}
+.b-left{
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 1px;
+    height: calc(100% - 40px);
+    background-color: rgba(69,183,255,0.3);
+}
+.b-left:before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 1px;
+    height: 7px;
+    background-color: #fff;
+}
+.b-left:after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 1px;
+    height: 7px;
+    background-color: #fff;
+}
+
+.b-top{
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 1px;
+    width: calc(100% - 40px);
+    background-color: rgba(69,183,255,0.3);
+}
+.b-top:before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 7px;
+    height: 1px;
+    background-color: #fff;
+}
+.b-top:after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 0;
+    height: 1px;
+    width: 7px;
+    background-color: #fff;
+}
+
+.b-right{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 1px;
+    height: calc(100% - 40px);
+    background-color: rgba(69,183,255,0.3);
+}
+.b-right:before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 1px;
+    height: 7px;
+    background-color: #fff;
+}
+.b-right:after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 1px;
+    height: 7px;
+    background-color: #fff;
+}
+
+.b-bottom{
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    height: 1px;
+    width: calc(100% - 40px);
+    background-color: rgba(69,183,255,0.3);
+}
+
+.b-bottom:before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 7px;
+    height: 1px;
+    background-color: #fff;
+}
+
+.b-bottom:after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 0;
+    height: 1px;
+    width: 7px;
+    background-color: #fff;
+}
+
+.zbox1{
+    height: 118px;
+    top: 48px;
+}
+.zbox2{
+    height: 296px;
+    top: 186px;
+}
+.zbox3{
+    height: 256px;
+    top: 502px;
+}
+.zbox4{
+    height: 118px;
+    top: 838px;
+    cursor: pointer;
+}
+.zboxyc{
+    top: 738px;
+    cursor: pointer;
+}
+.zcontent{
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    width: calc(100% - 14px);
+    height: calc(100% - 20px);
+}
+
+.zbox1 .zcontent{
+    background: url(../image/bg-point.png) rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.zvalue{
+    font-family: 'DIN MEDIUM';
+    font-size: 62px;
+    line-height: 98px;
+    text-shadow: 0 0 10px #01baff;
+    color: #fff;
+}
+.zunit{
+    font-size: 22px;
+    color: #fff;
+    line-height: 20px;
+    vertical-align: 16%;
+}
+.zbox2 .zcontent{
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.zbox2 .zvalue{
+    font-size: 50px;
+    margin-right: 10px;
+    line-height: 50px;
+}
+.zbox2 .zname{
+    font-size: 22px;
+    color: #01baff;
+}
+.zbox2 .zdate{
+    color: #01baff;
+    font-size: 20px;
+    padding-top: 12px;
+    font-family: 'DIN MEDIUM';
+}
+.zchart2{
+    position: relative;
+    width: 310px;
+    height: 50px;
+}
+.zchart3{
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+.zvaluebox{
+
+}
+.zvaluebox div.fl{
+    width: 50%;
+}
+.zvaluebox div.fl p{
+    text-align: center;
+}
+.zvaluebox .zflname{
+    color: #01baff;
+    font-size: 20px;
+    padding-top: 6px;
+}
+.zvaluebox .zvalue{
+    font-size: 30px;
+    line-height: 40px;
+}
+
+
+/* tip */
+.tip-container{
+    position: absolute;
+    color: #fff;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.depot-name{
+    font-size: 20px;
+    width: 113px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border:1px solid #01baff;
+    background-color: rgba(0,0,0,0.5);
+    margin-bottom: 1px;
+}
+.z-text{
+    height: 40px;
+    line-height: 46px;
+    min-width: 180px;
+    padding: 0 8px 0 16px;
+    background-color: rgba(0,0,0,0.5);
+    position: relative;
+    white-space:nowrap;
+}
+.z-text:before{
+    content: '';
+    width: 7px;
+    height: 46px;
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    background: url(../image/china/crossbg.png) no-repeat;
+}
+.z-text:after{
+    content: '';
+    width: 7px;
+    height: 46px;
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    background: url(../image/china/crossbg.png) no-repeat;
+}
+.ztext-name{
+    font-size: 16px;
+    vertical-align: 5%;
+}
+.ztext-value{
+    font-size:30px;
+    font-family: 'DIN MEDIUM';
+}
+
+.tip-chengdu{
+    left: calc(50% + 20px);
+    top: calc(50% - 20px);
+}
+.tip-beijing{
+    left: calc(50% + 300px);
+    top: calc(50% - 250px);
+}
+.tip-wuhan{
+    left: calc(50% + 278px);
+    top: calc(50% + 10px);
+}
+.tip-shanghai{
+    left: calc(50% + 460px);
+    top: calc(50% - 70px);
+}
+.tip-guangzhou{
+    left: calc(50% + 290px);
+    top: calc(50% + 180px);
+}
+@media screen and (min-width:2000px){
+    .tip-chengdu{
+        left: calc(50% + 20px / 0.75);
+        top: calc(50% - 20px / 0.75);
+    }
+    .tip-beijing{
+        left: calc(50% + 300px / 0.75);
+        top: calc(50% - 250px / 0.75);
+    }
+    .tip-wuhan{
+        left: calc(50% + 278px / 0.75);
+        top: calc(50% + 10px / 0.75);
+    }
+    .tip-shanghai{
+        left: calc(50% + 460px / 0.75);
+        top: calc(50% - 70px / 0.75);
+    }
+    .tip-guangzhou{
+        left: calc(50% + 290px / 0.75);
+        top: calc(50% + 180px / 0.75);
+    }
+}
+
+/* h2 */
+.zh2{
+    font-size: 54px;
+    line-height: 114px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    top: 0px;
+    transform: translateX(-50%);
+    /*opacity: 0;*/
+}
+.zdata-date{
+    position: absolute;
+    right: 60px;
+    top: 50px;
+    color: #fff;
+    font-size: 16px;
+    opacity: 0;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/china.css">
+</head>
+<body>
+	<div id="container3d"></div>
+	<h2 class="zh2">活动期间总概览</h2>
+	<p class="zdata-date">数据更新时间：<span class="ff-din">2017.04.06 16:40:01</span></p>
+	<div class="tip-container">
+		<div class="zdepot-box tip-chengdu">
+			<p class="depot-name">成都仓库</p>
+			<p class="z-text">
+				<span class="ztext-name">订单量：</span>
+				<span class="ztext-value">865,243</span>
+			</p>
+		</div>
+	</div>
+	<div class="zleft">
+		<div class="zleftbox" id="zleftbox">
+			<p class="ztitle">
+				截止当前销量
+				<span class="white-point lt"></span>
+				<span class="white-point rt"></span>
+				<span class="white-point lb"></span>
+				<span class="white-point rb"></span>
+			</p>
+			<div class="border-box zbox1">
+				<div>
+					<span class="b-left"></span>
+					<span class="b-top"></span>
+					<span class="b-right"></span>
+					<span class="b-bottom"></span>
+				</div>
+				<div class="zcontent">
+					<span class="zvalue z-ani" e-value="13312756"></span>
+					<span class="zunit">件</span>
+				</div>
+			</div>
+			<div class="border-box zbox2">
+				<div>
+					<span class="b-left"></span>
+					<span class="b-top"></span>
+					<span class="b-right"></span>
+					<span class="b-bottom"></span>
+				</div>
+				<div class="zcontent">
+					<p class="zname">订单总量</p>
+					<p>
+						<span class="zvalue z-ani" e-value="16416832"></span>
+						<span class="zunit">件</span>
+					</p>
+					<div class="zchart2" id="zchart2"></div>
+					<p class="zname">目标销量</p>
+					<p>
+						<span class="zvalue">21,463,545</span>
+						<span class="zunit">件</span>
+					</p>
+					<p class="zdate">2017.04.03─2017.04.06</p>
+				</div>
+			</div>
+			<div class="border-box zbox3">
+				<div>
+					<span class="b-left"></span>
+					<span class="b-top"></span>
+					<span class="b-right"></span>
+					<span class="b-bottom"></span>
+				</div>
+				<div class="zcontent">
+					<div class="zchart3" id="zchart3"></div>
+					<div class="zvaluebox clearfix">
+						<div class="fl">
+							<p class="zflname">已发货</p>
+							<p class="zvalue z-ani" e-value="9547863"></p>
+						</div>
+						<div class="fl">
+							<p class="zflname">已签收</p>
+							<p class="zvalue z-ani" e-value="6161742"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/TweenMax.min.js"></script>
+	<script type="text/javascript" src="lib/three.min.js"></script>
+	<script type="text/javascript" src="lib/OrbitControls.js"></script>
+	<script type="text/javascript" src="lib/stats.min.js"></script>
+	<script type="text/javascript" src="lib/dll.js"></script>
+	<script type="text/javascript" src="js/common/ThreeGroupLoader.js"></script>
+	<script type="text/javascript" src="js/common/ThreeBase.js"></script>
+	<script type="text/javascript" src="js/common/shaders.js"></script>
+	<script type="text/javascript" src="js/skyz/chinaMap.js"></script>
+	<script type="text/javascript" src="js/charts/zchart2.js"></script>
+	<script type="text/javascript" src="js/charts/zchart3.js"></script>
+	<script type="text/javascript" src="js/china.js"></script>
+	<script type="text/javascript">
+		new Exhibition.China();
+	</script>
+</body>
+</html>

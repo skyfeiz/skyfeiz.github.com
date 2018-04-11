@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+        }
+        #container3d {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="container3d"></div>
+
+<div class="shader">
+    <!-- Custom shaders for particle effects -->
+    <script type="x-shader/x-vertex" id="vertexshader">
+		// uniform float amplitude;
+		// attribute float size;
+		// attribute vec3 aColor;
+		attribute float aOpacity;
+		// varying vec3 vColor;
+		varying float vOpacity;
+		void main() {
+			// vColor = aColor;
+			vOpacity = aOpacity;
+			vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+			gl_PointSize = 3.0;
+			// gl_PointSize = size * (300.0 / length(mvPosition.xyz));
+			gl_Position = projectionMatrix * mvPosition;
+		}
+	</script>
+    <script type="x-shader/x-fragment" id="fragmentshader">
+		uniform vec3 color;
+		uniform float opacity;
+		uniform sampler2D texture;
+		// varying vec3 vColor;
+		varying float vOpacity;
+		void main() {
+			// gl_FragColor = vec4(color * vColor, opacity * vOpacity);
+			// gl_FragColor = vec4(vColor, vOpacity);
+			float opacity = texture2D(texture, gl_PointCoord).a * vOpacity;
+			gl_FragColor = vec4(color, vOpacity);
+		}
+	</script>
+    <!-- end of custom shaders -->
+</div>
+
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript" src="lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="lib/three.min.js"></script>
+<script type="text/javascript" src="lib/OBJLoader.js"></script>
+<script type="text/javascript" src="lib/OrbitControls.js"></script>
+<script type="text/javascript" src="js/common/ThreeGroupLoader.js"></script>
+<script type="text/javascript" src="js/common/ThreeBase.js"></script>
+<script type="text/javascript" src="js/test/test.js"></script>
+<script type="text/javascript" src="js/test/test1.js"></script>
+<script type="text/javascript">
+    var mc = new jf.Test();
+//    var mc = new jf.Test1();
+    render();
+
+    function render() {
+        requestAnimationFrame(render);
+        mc.render();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仓储预测</title>
+    <link rel="stylesheet" href="css/depotPage.css">
+</head>
+<body>
+    <div id="container3d"></div>
+
+    <span class="page-title">仓储预测</span>
+
+    <div class="numContainer"></div>
+    <div class="num">
+        <div>仓储总量</div>
+        <span style="font-size: 34px; text-shadow: 0 0 10px #01baff; top: -8px;">1000</span><span style="top: -8px;">万</span>
+        <div>累计发货量</div>
+        <span style="font-size: 34px; text-shadow: 0 0 10px #01baff; top: -8px;">500</span><span style="top: -8px;">万</span>
+        <div>仓储出货率</div>
+        <span style="font-size: 34px; text-shadow: 0 0 10px #01baff; top: -8px;">75%</span>
+    </div>
+
+    <div class="selDiv">
+        <div id="selDiv1">
+            <span id="sel">仓库名称</span>
+            <span class="triangle">
+					<img width="23px" height="23px" src="image/stockPage/arrow.png"></img>
+				</span>
+        </div>
+        <ul id="dropDownList">
+            <li>北京仓库</li>
+            <li>上海仓库</li>
+            <li>成都仓库</li>
+            <li>武汉仓库</li>
+            <li>广州仓库</li>
+        </ul>
+    </div>
+
+    <!--<div class="list">-->
+        <!--<li>-->
+            <!--<div class="list-title">-->
+                <!--<span class="icon icon-1"></span>-->
+                <!--<a>收货管理</a>-->
+            <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<div class="list-title">-->
+                <!--<span class="icon icon-2"></span>-->
+                <!--<a>出货管理</a>-->
+            <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<div class="list-title">-->
+                <!--<span class="icon icon-3"></span>-->
+                <!--<a style="color: #ffe400">库存管理</a>-->
+            <!--</div>-->
+            <!--<ul class="sub-list">-->
+                <!--<li style="color: #ffe400"><a style="color: #ffe400">补货预测</a></li>-->
+                <!--<li><a>库存盘点</a></li>-->
+                <!--<li><a>库位管理</a></li>-->
+            <!--</ul>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<div class="list-title">-->
+                <!--<span class="icon icon-4"></span>-->
+                <!--<a>个性服务</a>-->
+            <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<div class="list-title">-->
+                <!--<span class="icon icon-5"></span>-->
+                <!--<a>信息服务</a>-->
+            <!--</div>-->
+        <!--</li>-->
+    <!--</div>-->
+
+    <div class="menu">
+        <div class="split"></div>
+        <ul>
+            <li>
+                <div class="menuItem">
+                    <span class="title">仓储量预测</span>
+                    <span class="menu-icon icon0"></span>
+                </div>
+            </li>
+            <li>
+                <div class="menuItem">
+                    <span class="title">销售趋势</span>
+                    <span class="menu-icon icon1"></span>
+                </div>
+            </li>
+            <li>
+                <div class="menuItem">
+                    <span class="title">仓储量概览</span>
+                    <span class="menu-icon icon2"></span>
+                </div>
+            </li>
+            <li>
+                <div class="menuItem">
+                    <span class="title currentTitle">仓储出货量排行</span>
+                    <span class="menu-icon icon3 currentIcon"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="loading">
+        <div class="loadingCir">
+            <img src="image/loading.apng" width="64" height="64"/>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/TweenMax.min.js"></script>
+    <script type="text/javascript" src="lib/three.min.js"></script>
+    <script type="text/javascript" src="lib/OBJLoader.js"></script>
+    <script type="text/javascript" src="lib/OrbitControls.js"></script>
+    <script type="text/javascript" src="lib/stats.min.js"></script>
+    <script type="text/javascript" src="js/common/ThreeGroupLoader.js"></script>
+    <script type="text/javascript" src="js/common/ThreeBase.js"></script>
+    <script type="text/javascript" src="js/common/ThreeShader.js"></script>
+    <script type="text/javascript" src="js/charts/chart11.js"></script>
+    <script type="text/javascript" src="js/charts/chart22.js"></script>
+    <script type="text/javascript" src="js/charts/chart33.js"></script>
+    <script type="text/javascript" src="js/charts/chart44.js"></script>
+    <script type="text/javascript" src="js/depotPage.js"></script>
+    <script type="text/javascript">
+        $('#sel').text(getQueryString('depot') + '仓库');
+
+        /**
+         * 获取URL参数
+         * @param  {string} name 参数名称
+         * @return {string}      参数值
+         */
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null)
+                return decodeURI(r[2]);
+            return null;
+        }
+
+        //--------------------------- 3D场景 ----------------------------
+
+        var mc = new Exhibition.DepotPage();
+
+        var stats = new Stats();
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+
+
+        render();
+        function render() {
+            requestAnimationFrame(render);
+            mc.render();
+
+            stats.update();
+        }
+
+        //--------------------------- 导航菜单 ----------------------------
+
+        var currentIndex = 3;
+        var currentIcon = $('.currentIcon');
+        var currentTitle = $('.currentTitle');
+        $('.menu-icon').each(function (index) {
+            $(this).click(function () {
+                menuClick(index, $(this));
+            });
+        });
+
+        function menuClick(index, currentMenuItem) {
+            if (currentMenuItem.hasClass('currentIcon')) return;
+
+            currentIcon.css({
+                background: 'url(image/menu/menu' + currentIndex + '.png)'
+            });
+            currentIcon.removeClass('currentIcon');
+            currentTitle.removeClass('currentTitle');
+
+
+            currentIndex = index;
+            currentIcon = currentMenuItem;
+            currentTitle = currentMenuItem.prev();
+            currentIcon.css({
+                background: 'url(image/menu/menuH.png)'
+            });
+            currentIcon.addClass('currentIcon');
+            currentTitle.addClass('currentTitle');
+
+
+            mc.moveCamera(3 - index);
+        }
+
+
+        //--------------------------- 下拉菜单 ----------------------------
+
+        var isOpen = false;
+        // 选择器头部点击时触发，需要取消事件的冒泡行为，防止触发document的onclick。
+        $('#selDiv1').click(function (evt) {
+            var oEvent = evt || event;
+            if (isOpen)
+            {
+                $('#dropDownList').css({
+                    display: 'none'
+                });
+            } else {
+                $('#dropDownList').css({
+                    display: 'block'
+                });
+                oEvent.cancelBubble = true;
+            }
+            isOpen = !isOpen;
+        });
+
+        // 其他位置点击时触发，隐藏自定义选择器列表。
+        $(document).click(function () {
+//            $('#dropDownList').css({
+//                display: 'none'
+//            });
+//            isOpen = false;
+        });
+    </script>
+</body>
+</html>

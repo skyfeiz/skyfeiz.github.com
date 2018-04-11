@@ -1,0 +1,292 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: url("../image/bg11.jpg") no-repeat;
+    background-size: cover;
+    /*background: #011339;*/
+    position: relative;
+}
+
+#container3d {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+}
+
+.page-title {
+    position: absolute;
+    top: 0px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 54px;
+}
+
+.loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -32px;
+    margin-top: -32px;
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+@-webkit-keyframes ro {
+    0% { -webkit-transform:rotate(0deg); }
+    50% { -webkit-transform:rotate(180deg); }
+    100% { -webkit-transform:rotate(360deg); }
+}
+.loadingCir {
+    /*-webkit-animation-name: 'ro';*/
+    /*-webkit-animation-duration: 2s;*/
+    /*-webkit-animation-timing-function: linear;*/
+    /*-webkit-animation-iteration-count: infinite;*/
+}
+
+/* 下面是右侧menu */
+
+.menu {
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    margin-top: -161px;
+    width: 300px;
+    height: 322px;
+    /*background: #fff;*/
+    text-align: right;
+    overflow: hidden;
+}
+.menu > ul, .menu > li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.split {
+    position: absolute;
+    right: 34px;
+    top: 64px;
+    width: 7px;
+    height: 200px;
+    background: url("../image/menu/menuDepot.png");
+    background-size: cover;
+}
+.menuItem {
+    position: relative;
+    width: 100%;
+    height: 83px;
+    cursor: pointer;
+}
+.menu-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 75px;
+    height: 75px;
+    display: inline-block;
+}
+.icon0 {
+    background: url("../image/menu/menu0.png");
+    background-size: cover;
+}
+.icon1 {
+    background: url("../image/menu/menu1.png");
+    background-size: cover;
+}
+.icon2 {
+    background: url("../image/menu/menu2.png");
+    background-size: cover;
+}
+.icon3 {
+    /*background: url("../image/menu/menu3.png");*/
+    /*background-size: cover;*/
+}
+.currentIcon {
+    background: url("../image/menu/menuH.png");
+    background-size: cover;
+}
+.title {
+    display: inline-block;
+    position: absolute;
+    right: 80px;
+    top: 17px;
+    font-size: 30px;
+    color: #ffe400;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.currentTitle {
+    opacity: 1;
+}
+
+/* 下面是下拉菜单 */
+
+.selDiv {
+    position: absolute;
+    top: 100px;
+    left: 120px;
+    width: 230px;
+    height: 60px;
+    background: url("../image/stockPage/dropdown-bg.png") no-repeat;
+    background-size: cover;
+}
+#sel {
+    display: block;
+    padding-left: 50px;
+    line-height: 60px;
+    /*border: solid #ccc 1px;*/
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    /*text-align: center;*/
+}
+.triangle {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 20px;
+    width: 23px;
+    height: 23px;
+    padding-top: 20px;
+    padding-left: 6px;
+    /*border-left: solid #ccc 1px;*/
+    cursor: pointer;
+}
+.selDiv > ul {
+    display: none;
+    margin: 0 5px;
+    padding: 15px 0 10px 0;
+    /*border: solid rgba(0, 210, 255, 1) 1px;*/
+    border: solid #00d2ff 1px;
+    height: 140px;
+    /*background-color: rgba(0, 210, 255, 0.7);*/
+    background: rgba(0, 0, 0, 0.7);
+}
+.selDiv > ul li {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding: 3px 15px;
+    color: #fff;
+    cursor: pointer;
+}
+.selDiv > ul li:hover {
+    /*color: #ffe400;*/
+    background: rgba(0, 210, 255, 0.7);
+}
+
+/* 下面是数值信息 */
+
+.numContainer {
+    position: absolute;
+    /*left: -20px;*/
+    top: 200px;
+    width: 467px;
+    height: 305px;
+    background: url("../image/stockPage/numBg.png");
+}
+.num {
+    position: absolute;
+    left: 150px;
+    top: 210px;
+    width: 170px;
+    height: 305px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    /*background: #fff;*/
+}
+.num > div {
+    position: relative;
+    width: 170px;
+    height: 50px;
+    line-height: 50px;
+}
+.num > span {
+    position: relative;
+}
+
+
+/* 下面是交互菜单 */
+
+.list {
+    position: absolute;
+    left: 125px;
+    top: 555px;
+    list-style: none;
+}
+.sub-list {
+    margin: 8px 0 8px 70px;
+    color: #fff;
+    list-style: square;
+}
+.sub-list > li {
+    cursor: pointer;
+    margin-top: 8px;
+    transition: color 0.5s;
+}
+.sub-list > li:hover {
+    color: #ffe400;
+}
+
+.list-title {
+    width: 223px;
+    height: 44px;
+    line-height: 40px;
+    text-align: center;
+    /*background: rgba(0, 0, 0, 0.3);*/
+    margin-top: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.5s;
+    background: url("../image/stockPage/list-title-bg.png");
+}
+.list-title:hover {
+    color: #ffe400;
+}
+.list-title:hover > span {
+    /*background: url("../image/stockPage/shouhuoH.png");*/
+}
+.icon {
+    display: inline-block;
+    position: relative;
+}
+.icon-1 {
+    top: 7.5px;
+    width: 30px;
+    height: 25px;
+    background: url("../image/stockPage/shouhuo.png");
+}
+.icon-2 {
+    top: 7.5px;
+    width: 30px;
+    height: 25px;
+    background: url("../image/stockPage/chuhuo.png");
+}
+.icon-3 {
+    top: 5px;
+    width: 22px;
+    height: 22px;
+    background: url("../image/stockPage/kucunH.png");
+}
+.icon-4 {
+    top: 5px;
+    width: 23px;
+    height: 25px;
+    background: url("../image/stockPage/gexing.png");
+}
+.icon-5 {
+    top: 5px;
+    width: 20px;
+    height: 23px;
+    background: url("../image/stockPage/xinxi.png");
+}

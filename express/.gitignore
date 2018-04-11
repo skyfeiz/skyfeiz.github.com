@@ -1,0 +1,25 @@
+.obj
+.DS_Stroe
+.idea
+# Build and Release Folders
+bin/
+bin-debug/
+bin-release/
+html-template/
+libs/
+.actionScriptProperties
+.flexProperties
+.fxpProperties
+.flexLibProperties
+.project
+
+# System caches
+.DS_Store
+Thumb.db
+
+# Other files and folders
+.settings/
+
+# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
+# should NOT be excluded as they contain compiler settings and other important
+# information for Eclipse / Flash Builder.

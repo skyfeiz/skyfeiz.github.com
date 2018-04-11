@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>异常件原因分析</title>
+    <link rel="stylesheet" href="css/errorPage.css">
+</head>
+<body>
+    <div id="container3d"></div>
+
+    <span class="page-title">异常件原因分析</span>
+
+    <div class="menu">
+        <div class="split"></div>
+        <ul>
+            <li>
+                <div class="menuItem">
+                    <span class="title">快件派送超过两天占比</span>
+                    <span class="menu-icon icon0"></span>
+                </div>
+            </li>
+            <li>
+                <div class="menuItem">
+                    <span class="title">快件时效性分析</span>
+                    <span class="menu-icon icon1"></span>
+                </div>
+            </li>
+            <li>
+                <div class="menuItem">
+                    <span class="title">快件拒收原因概览</span>
+                    <span class="menu-icon icon2"></span>
+                </div>
+            </li>
+            <li>
+                <div class="menuItem">
+                    <span class="title">异常件原因概览</span>
+                    <span class="menu-icon icon3"></span>
+                </div>
+            </li>
+            <li>
+                <div class="menuItem">
+                    <span class="title currentTitle">异常件概览</span>
+                    <span class="menu-icon icon4 currentIcon"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="loading">
+        <div class="loadingCir">
+            <img src="image/loading.apng" width="64" height="64"/>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/TweenMax.min.js"></script>
+    <script type="text/javascript" src="lib/three.min.js"></script>
+    <script type="text/javascript" src="lib/OBJLoader.js"></script>
+    <script type="text/javascript" src="lib/OrbitControls.js"></script>
+    <script type="text/javascript" src="lib/stats.min.js"></script>
+    <script type="text/javascript" src="js/common/ThreeGroupLoader.js"></script>
+    <script type="text/javascript" src="js/common/ThreeBase.js"></script>
+    <script type="text/javascript" src="js/common/ThreeShader.js"></script>
+    <script type="text/javascript" src="js/charts/chart1.js"></script>
+    <script type="text/javascript" src="js/charts/chart2.js"></script>
+    <script type="text/javascript" src="js/charts/chart3.js"></script>
+    <script type="text/javascript" src="js/charts/chart4.js"></script>
+    <script type="text/javascript" src="js/charts/chart5.js"></script>
+    <script type="text/javascript" src="js/errorPage.js"></script>
+    <script type="text/javascript">
+        var mc = new Exhibition.ErrorPage();
+
+        var stats = new Stats();
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+
+
+        render();
+        function render() {
+            requestAnimationFrame(render);
+            mc.render();
+
+            stats.update();
+        }
+
+        //--------------------------- 导航菜单 ----------------------------
+
+        var currentIndex = 4;
+        var currentIcon = $('.currentIcon');
+        var currentTitle = $('.currentTitle');
+        $('.menu-icon').each(function (index) {
+            $(this).click(function () {
+                menuClick(index, $(this));
+            });
+        });
+
+        function menuClick(index, currentMenuItem) {
+            if (currentMenuItem.hasClass('currentIcon')) return;
+
+            currentIcon.css({
+                background: 'url(image/menu/menu' + currentIndex + '.png)'
+            });
+            currentIcon.removeClass('currentIcon');
+            currentTitle.removeClass('currentTitle');
+
+
+            currentIndex = index;
+            currentIcon = currentMenuItem;
+            currentTitle = currentMenuItem.prev();
+            currentIcon.css({
+                background: 'url(image/menu/menuH.png)'
+            });
+            currentIcon.addClass('currentIcon');
+            currentTitle.addClass('currentTitle');
+
+
+            mc.moveCamera(4 - index);
+        }
+    </script>
+</body>
+</html>

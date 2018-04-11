@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>物流行业数据可视化分析</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div id="container3d">
+		<div class="light"></div>
+	</div>
+
+	<h2 class="zh2 page-title">物流行业数据可视化分析解决方案</h2>
+	<h2 class="zh2 opa-show">物流数据总概览</h2>
+	<p class="zdata-date opa-show">数据更新时间：<span class="ff-din">2017.11.10</span></p>
+	<div class="tip-container opa-show">
+		<div class="zdepot-box tip-chengdu">
+			<p class="depot-name">成都仓库</p>
+			<p class="z-text">
+				<span class="ztext-name">订单量：</span>
+				<span class="ztext-value">865,243</span>
+			</p>
+		</div>
+		<div class="zdepot-box tip-beijing">
+			<p class="depot-name">北京仓库</p>
+			<p class="z-text">
+				<span class="ztext-name">订单量：</span>
+				<span class="ztext-value">4,335,714</span>
+			</p>
+		</div>
+		<div class="zdepot-box tip-wuhan">
+			<p class="depot-name">武汉仓库</p>
+			<p class="z-text">
+				<span class="ztext-name">订单量：</span>
+				<span class="ztext-value">2,853,315</span>
+			</p>
+		</div>
+		<div class="zdepot-box tip-shanghai">
+			<p class="depot-name">上海仓库</p>
+			<p class="z-text">
+				<span class="ztext-name">订单量：</span>
+				<span class="ztext-value">3,125,836</span>
+			</p>
+		</div>
+		<div class="zdepot-box tip-guangzhou">
+			<p class="depot-name">广州仓库</p>
+			<p class="z-text">
+				<span class="ztext-name">订单量：</span>
+				<span class="ztext-value">5,236,724</span>
+			</p>
+		</div>
+	</div>
+	<div class="zleft">
+		<div class="zleftbox" id="zleftbox">
+			<p class="ztitle">
+				订单总量
+				<span class="white-point lt"></span>
+				<span class="white-point rt"></span>
+				<span class="white-point lb"></span>
+				<span class="white-point rb"></span>
+			</p>
+			<div class="border-box zbox1">
+				<div>
+					<span class="b-left"></span>
+					<span class="b-top"></span>
+					<span class="b-right"></span>
+					<span class="b-bottom"></span>
+				</div>
+				<div class="zcontent">
+					<span class="zvalue z-ani" e-value="16416832"></span>
+					<span class="zunit">件</span>
+				</div>
+			</div>
+			<div class="border-box zbox2">
+				<div>
+					<span class="b-left"></span>
+					<span class="b-top"></span>
+					<span class="b-right"></span>
+					<span class="b-bottom"></span>
+				</div>
+				<div class="zcontent">
+					<p class="zname">截止当前销量</p>
+					<p>
+						<span class="zvalue z-ani" e-value="21463545"></span>
+						<span class="zunit">件</span>
+					</p>
+					<div class="zchart2" id="zchart2"></div>
+					<p class="zname">目标销量</p>
+					<p>
+						<span class="zvalue">79,930,433</span>
+						<span class="zunit">件</span>
+					</p>
+					<p class="zdate">2017.11.12─2017.11.16</p>
+				</div>
+			</div>
+			<div class="border-box zbox3">
+				<div>
+					<span class="b-left"></span>
+					<span class="b-top"></span>
+					<span class="b-right"></span>
+					<span class="b-bottom"></span>
+				</div>
+				<div class="zcontent">
+					<div class="zchart3" id="zchart3"></div>
+					<div class="zvaluebox clearfix">
+						<div class="fl">
+							<p class="zflname">已发货</p>
+							<p class="zvalue z-ani" e-value="15453752"></p>
+						</div>
+						<div class="fl">
+							<p class="zflname">已签收</p>
+							<p class="zvalue z-ani" e-value="13736668"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="ztitle zboxyc" id="zboxyc">
+				截止当前异常件总量
+				<span class="white-point lt"></span>
+				<span class="white-point rt"></span>
+				<span class="white-point lb"></span>
+				<span class="white-point rb"></span>
+			</p>
+			<div class="border-box zbox1 zbox4" id="zbox4">
+				<div>
+					<span class="b-left"></span>
+					<span class="b-top"></span>
+					<span class="b-right"></span>
+					<span class="b-bottom"></span>
+				</div>
+				<div class="zcontent">
+					<span class="zvalue z-ani" e-value="64523"></span>
+					<span class="zunit">件</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/TweenMax.min.js"></script>
+	<script type="text/javascript" src="lib/three.min.js"></script>
+	<script type="text/javascript" src="lib/OrbitControls.js"></script>
+	<script type="text/javascript" src="lib/stats.min.js"></script>
+	<script type="text/javascript" src="lib/dll.js"></script>
+	<script type="text/javascript" src="js/common/ThreeGroupLoader.js"></script>
+	<script type="text/javascript" src="js/common/ThreeBase.js"></script>
+	<script type="text/javascript" src="js/common/ThreeShader.js"></script>
+	<script type="text/javascript" src="js/common/shaders.js"></script>
+	<script type="text/javascript" src="js/charts/zchart2.js"></script>
+	<script type="text/javascript" src="js/charts/zchart3.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/left.js"></script>
+	<script type="text/javascript">
+		$('.ff-din').text('2017.11.' + (new Date().getDate() - 1));
+
+
+		var left = new Exhibition.Left();
+		var mc = new Exhibition.Earth();
+
+		var zchart2 = new Exhibition.Zchart2(document.getElementById('zchart2'));
+		var zchart3 = new Exhibition.Zchart3(document.getElementById('zchart3'));
+
+		var stats = new Stats();
+		stats.domElement.style.position = 'absolute';
+		stats.domElement.style.left = '0px';
+		stats.domElement.style.top = '0px';
+		document.body.appendChild(stats.domElement);
+
+
+		render();
+		function render() {
+			requestAnimationFrame(render);
+			mc.render();
+
+			stats.update();
+		}
+
+		mc.onComplete = function(){
+			left.init();
+		}
+	</script>
+</body>
+</html>
