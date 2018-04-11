@@ -1,0 +1,35 @@
+{
+	"success": true,
+	"title": "模块故障频次",
+	"data": [{
+		"name": "电控组块",
+		"xNum": 0.2,
+		"yNum": 1.0,
+		"rNum": 80
+	}, {
+		"name": "操纵杆",
+		"xNum": 0.4,
+		"yNum": 3.6,
+		"rNum": 100
+	}, {
+		"name": "发电机",
+		"xNum": 1.0,
+		"yNum": 1.4,
+		"rNum": 40
+	}, {
+		"name": "空调",
+		"xNum": 1.0,
+		"yNum": 2.4,
+		"rNum": 40
+	}, {
+		"name": "机械前臂",
+		"xNum": 1.8,
+		"yNum": 1.2,
+		"rNum": 200
+	}, {
+		"name": "液压主泵",
+		"xNum": 2.2,
+		"yNum": 3.2,
+		"rNum": 80
+	}]
+}

@@ -1,0 +1,35 @@
+{
+	"success": true,
+	"title": "热销花样价格排行",
+	"data": [{
+		"name": "小花满枝",
+		"value": 20
+	}, {
+		"name": "网格",
+		"value": 40
+	}, {
+		"name": "凤凰",
+		"value": 40
+	}, {
+		"name": "莲花",
+		"value": 60
+	}, {
+		"name": "兰花",
+		"value": 70
+	}, {
+		"name": "双龙戏珠",
+		"value": 90
+	}, {
+		"name": "虎头",
+		"value": 90
+	}, {
+		"name": "骏马奔腾",
+		"value": 160
+	}, {
+		"name": "齐白石-虾",
+		"value": 199
+	}, {
+		"name": "猫狗同伴",
+		"value": 200
+	}]
+}

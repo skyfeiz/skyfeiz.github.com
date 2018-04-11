@@ -1,0 +1,11 @@
+{
+	"success": true,
+	"title":"工程师响应时间",
+	"data": [{
+		"name": "传统模式",
+		"value": 300
+	}, {
+		"name": "iCSM上线后",
+		"value": 15
+	}]
+}

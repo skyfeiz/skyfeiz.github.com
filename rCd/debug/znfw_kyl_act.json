@@ -1,0 +1,25 @@
+{
+	"success": true,
+	"title": "提高备件满足度举措",
+	"data": [{
+		"name": "备件预测准确率",
+		"value": 55,
+		"seriesName": "增加"
+	}, {
+		"name": "仓库合理分布",
+		"value": 35,
+		"seriesName": "增加"
+	}, {
+		"name": "备件周转速度",
+		"value": 30,
+		"seriesName": "增加"
+	}, {
+		"name": "关键备件保障",
+		"value": 17,
+		"seriesName": "增加"
+	}, {
+		"name": "制度保障",
+		"value": 15,
+		"seriesName": "增加"
+	}]
+}

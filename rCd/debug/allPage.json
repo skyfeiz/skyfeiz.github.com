@@ -1,0 +1,18 @@
+{
+	"page1":{
+		"header":true,
+		"bottom":true
+	},
+	"page2":{
+		"header":true,
+		"bottom":true
+	},
+	"page3":{
+		"header":false,
+		"bottom":false
+	},
+	"page4":{
+		"header":true,
+		"bottom":true
+	}
+}

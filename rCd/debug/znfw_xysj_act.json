@@ -1,0 +1,20 @@
+{
+	"success": true,
+	"title":"高响应举措",
+	"data": [{
+		"name": "智能服务",
+		"value": 33
+	}, {
+		"name": "制度完善",
+		"value": 20
+	}, {
+		"name": "其他因素",
+		"value": 17
+	}, {
+		"name": "流程成熟",
+		"value": 16
+	}, {
+		"name": "经验先进",
+		"value": 10
+	}]
+}

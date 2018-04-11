@@ -1,0 +1,30 @@
+{
+	"success": true,
+	"title": "智能服务",
+	"data": [{
+		"seriesName": "工程师响应时间",
+		"start": "300",
+		"end": "15",
+		"unit": "分钟"
+	}, {
+		"seriesName": "常用备件满足度",
+		"start": "60",
+		"end": "91",
+		"unit": "%"
+	}, {
+		"seriesName": "一次性修复率",
+		"start": "75",
+		"end": "92",
+		"unit": "%"
+	}, {
+		"seriesName": "设备故障率",
+		"start": "16.85",
+		"end": "8.8",
+		"unit": "%"
+	}, {
+		"seriesName": "旧件回收比例",
+		"start": "48",
+		"end": "92",
+		"unit": "%"
+	}]
+}

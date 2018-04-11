@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>智能服务</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/p1.css">
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/controller.js"></script>
+    <script src="libs/wbchart.js"></script>
+    <script src="libs/TweenMax.min.js"></script>
+    <script src="libs/CustomEase.js"></script>
+<script type="text/javascript" src="js/charts.js"></script></head>
+
+<body>
+    <div class="root">
+        <div id="BG">
+            <img class="bgCover" src="imgs/p1/bgCover.jpg">
+            <img class="img1" src="imgs/p1/centerNut.png">
+            <img class="img2" src="imgs/p1/nut1.png">
+        </div>
+        <section class="toptitlebox">
+            <h2>智能服务</h2>
+        </section>
+        <section class="canvaslines" id="canvaslines">
+        </section>
+        <section class="boxcenter preserve-3d" id="boxcenter"></section>
+        <section class="bottombox clearfix">
+            <a href="p1.html" class="fl active">
+                <p>智能服务</p>
+            </a>
+            <a href="p2.html" class="fl">
+                <p>共享经济</p>
+            </a>
+            <a href="p3.html" class="fl">
+                <p>模式创新</p>
+            </a>
+            <a href="p4.html" class="fl">
+                <p>研发辅助</p>
+            </a>
+        </section>
+        <section class="element-div znfw_chart1">
+            <p class="charttitle"></p>
+            <div class="znfw_chart1_01">
+                <div id="znfw_chart1_01">
+                </div>
+                <img src="imgs/p1/innerCircle.png">
+                <img class="rollImg" src="imgs/p1/innerCircle1.png">
+                <div class="textBox">
+                    <p class="p1">0</p>
+                    <p class="p2">分钟</p>
+                </div>
+            </div>
+            <div class="znfw_chart1_02">
+                <div id="znfw_chart1_02">
+                </div>
+                <img src="imgs/p1/innerCircle.png">
+                <img class="rollImg" src="imgs/p1/innerCircle1.png">
+                <div class="textBox">
+                    <p class="p1">0</p>
+                    <p class="p2">分钟</p>
+                </div>
+            </div>
+        </section>
+        <section class="element-div znfw_chart2">
+            <p class="charttitle"></p>
+            <div class="w100p100" id="znfw_chart2"></div>
+        </section>
+        <section class="element-div znfw_chart3">
+            <p class="charttitle"></p>
+            <div class="w100p100" id="znfw_chart3"></div>
+        </section>
+        <section class="element-div znfw_chart4">
+            <div class="w100p100 gridbg"></div>
+            <p class="charttitle"></p>
+            <div class="w100p100" id="znfw_chart4"></div>
+        </section>
+        <section class="element-div znfw_chart5">
+            <p class="charttitle"></p>
+            <div class="w100p100" id="znfw_chart5"></div>
+        </section>
+        <!-- 反面 -->
+        <section  class="znfw_chart11">
+            <p class="charttitle"></p>
+            <div class="znfw_chart11_box_bg"></div>
+            <div class="znfw_chart11_box"></div>
+        </section>
+        <section  class="znfw_chart21">
+            <p class="charttitle"></p>
+            <div class="znfw_chart21_box"></div>
+        </section>
+        <section  class="znfw_chart31">
+            <p class="charttitle"></p>
+            <div class="znfw_chart31_box"></div>
+        </section>
+        <section  class="znfw_chart41">
+            <p class="charttitle"></p>
+            <div class="znfw_chart41_box_bg"></div>
+            <div class="znfw_chart41_box"></div>
+        </section>
+        <section  class="znfw_chart51">
+            <p class="charttitle"></p>
+            <div class="znfw_chart51_box"></div>
+        </section>
+    </div>
+    <div class="transformBG z_clone">
+        <div class="transformBox1">
+            <div class="leftBar1" mark-side="left" mark-Left=207 mark-top=9 mark-rotate=0></div>
+            <div class="leftBar2" mark-side="left" mark-Left=-3 mark-top=-1 mark-rotate=-45></div>
+            <div class="leftBar3" mark-side="top" mark-Left=0 mark-top=13 mark-rotate=0></div>
+            <div class="leftBar4" mark-side="top" mark-Left=0 mark-top=158 mark-rotate=0></div>
+            <div class="leftBar5" mark-side="left" mark-Left=150 mark-top=363 mark-rotate=0></div>
+            
+            <img class="leftStick1" mark-side="left" mark-Left=78 mark-top=7 mark-rotate=0 src="imgs/transformSticks/stick1.png">
+            <img class="leftStick2" mark-side="left" mark-Left=62 mark-top=0 mark-rotate=0 src="imgs/transformSticks/stick2.png">
+            <img class="leftStick3" mark-side="left" mark-Left=0 mark-top=0 mark-rotate=0 src="imgs/transformSticks/stick3.png">
+            <img class="leftStick4" mark-side="top" mark-Left=0 mark-top=99 mark-rotate=0 src="imgs/transformSticks/stick4.png">
+            <img class="leftStick5" mark-side="top" mark-Left=0 mark-top=234 mark-rotate=0 src="imgs/transformSticks/stick5.png">
+            <img class="leftStick6" mark-side="top" mark-Left=2 mark-top=288 mark-rotate=0 src="imgs/transformSticks/stick6.png">
+            <img class="leftStick7" mark-side="left" mark-Left=2 mark-top=334 mark-rotate=0 src="imgs/transformSticks/stick7.png">
+            <img class="leftStick8" mark-side="left" mark-Left=-2 mark-top=361 mark-rotate=0 src="imgs/transformSticks/stick8.png">
+        </div>
+        <div class="transformBox2">
+            <div class="rightBar2" mark-side="right" mark-right=-3 mark-top=-1 mark-rotate=45></div>
+            <div class="rightBar3" mark-side="top" mark-right=0 mark-top=13 mark-rotate=0></div>
+            <div class="rightBar4" mark-side="top" mark-right=0 mark-top=158 mark-rotate=0></div>
+            <img class="rightStick1" mark-side="right" mark-right=78 mark-top=7 mark-rotate=0 src="imgs/transformSticks/stick10.png">
+            <img class="rightStick2" mark-side="right" mark-right=62 mark-top=0 mark-rotate=0 src="imgs/transformSticks/stick20.png">
+            <img class="rightStick3" mark-side="right" mark-right=0 mark-top=0 mark-rotate=0 src="imgs/transformSticks/stick30.png">
+            <img class="rightStick4" mark-side="top" mark-right=0 mark-top=99 mark-rotate=0 src="imgs/transformSticks/stick40.png">
+            <img class="rightStick5" mark-side="top" mark-right=0 mark-top=234 mark-rotate=0 src="imgs/transformSticks/stick50.png">
+            <img class="rightStick6" mark-side="top" mark-right=2 mark-top=288 mark-rotate=0 src="imgs/transformSticks/stick60.png">
+            <img class="rightStick7" mark-side="right" mark-right=2 mark-top=334 mark-rotate=0 src="imgs/transformSticks/stick70.png">
+            <img class="rightStick8" mark-side="right" mark-right=-2 mark-top=361 mark-rotate=0 src="imgs/transformSticks/stick80.png">
+        </div>
+    </div>
+    <script src="js/p1.js"></script>
+</body>
+
+</html>

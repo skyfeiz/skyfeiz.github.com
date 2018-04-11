@@ -1,0 +1,41 @@
+{
+	"success": true,
+	"title": "一次性修复率",
+	"data": [{
+		"seriesName": "物联前",
+		"dataList": [{
+			"name": "发动机故障",
+			"value": "45"
+		}, {
+			"name": "臂架故障",
+			"value": "43"
+		}, {
+			"name": "电子系统故障",
+			"value": "45"
+		}, {
+			"name": "传感器故障",
+			"value": "48"
+		}, {
+			"name": "底盘系统故障",
+			"value": "43"
+		}]
+	}, {
+		"seriesName": "物联后",
+		"dataList": [{
+			"name": "发动机故障",
+			"value": "72"
+		}, {
+			"name": "臂架故障",
+			"value": "70"
+		}, {
+			"name": "电子系统故障",
+			"value": "60"
+		}, {
+			"name": "传感器故障",
+			"value": "65"
+		}, {
+			"name": "底盘系统故障",
+			"value": "64"
+		}]
+	}]
+}

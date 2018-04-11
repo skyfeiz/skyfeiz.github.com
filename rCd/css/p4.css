@@ -1,0 +1,87 @@
+.yffzChart1box{
+	position: absolute;
+	left: 83px;
+	top: 127px;
+	width: 843px;
+	height: 818px;
+}
+.yffzChart1box .transformBG{
+	height: 466px;
+	transform: scale(1.71);
+	transform-origin: left bottom;
+}
+.yffzChart1{
+	position: absolute;
+	left: 0;
+	top: 30px;
+	width: 100%;
+	height: 788px;
+}
+.charttitle{
+	font-size: 20px;
+	line-height: 25px;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 0 10px #3197d9;
+}
+
+.yffzChart2box{
+	width: 846px;
+	height: 262px;
+	position: absolute;
+	left: 1000px;
+	top: 130px;
+}
+.yffzChart2box .transformBG,.yffzChart3box .transformBG,.yffzChart4box .transformBG{
+	width: 843px;
+	height: 244px;
+}
+.yffzChart2box .leftBar1,.yffzChart3box .leftBar1,.yffzChart4box .leftBar1{
+	width: 430px;
+}
+.yffzChart2box .leftBar5,.yffzChart3box .leftBar5,.yffzChart4box .leftBar5{
+	width: 534px;
+}
+.yffzChart1box .leftBar1{
+ 	width: 79px;
+}
+.yffzChart1box .leftBar5{
+ 	width: 183px;
+}
+.yffzChart2{
+	position: absolute;
+	left: 0;
+	top: 30px;
+	width: 100%;
+	height: 232px;
+}
+
+.yffzChart3box{
+	width: 846px;
+	height: 262px;
+	position: absolute;
+	left: 1000px;
+	top: 406px;
+}
+.yffzChart3{
+	position: absolute;
+	left: 0;
+	top: 30px;
+	width: 100%;
+	height: 232px;
+}
+
+.yffzChart4box{
+	width: 846px;
+	height: 262px;
+	position: absolute;
+	left: 1000px;
+	top: 683px;
+}
+.yffzChart4{
+	position: absolute;
+	left: 0;
+	top: 30px;
+	width: 100%;
+	height: 232px;
+}

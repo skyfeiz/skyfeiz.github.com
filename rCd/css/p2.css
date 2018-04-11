@@ -1,0 +1,468 @@
+.mainleft{
+    width: 840px;
+    height: 916px;
+    position: absolute;
+    left: 79px;
+    top: 90px;
+    display: none;
+}
+.phonebox{
+	height: 46px;
+}
+.hotline{
+	font-size: 16px;
+	color: #33b6d7;
+	line-height: 46px;
+}
+.phone{
+	font-size: 24px;
+	color: #fff;
+	font-family: 'DIN MEDIUM';
+}
+.searchinput{
+	width: 420px;
+	height: 40px;
+	padding-left: 13px;
+	line-height: 38px;
+	border: 1px solid #00dcff;
+	background: none;
+	outline: none;
+	font-size: 14px;
+	color: #33b6d7;
+	box-sizing: border-box;
+	margin-right: 10px;
+}
+.searchbtn{
+	width: 175px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+	box-shadow: 0 0 20px #0082a2 inset;
+	margin-right: 45px;
+	cursor: pointer;
+}
+.searchbtn:last-child{
+	margin-right: 0;
+}
+.searchbtn.active,.searchbtn:hover{
+	background-color: #085474;
+	box-shadow: 0 0 12px #81c4f7 inset;
+}
+.title2{
+	color: #fff;
+	font-size: 16px;
+	line-height: 26px;
+	border-bottom: 1px solid rgba(51,182,215,0.5);
+	position: relative;
+	padding-top: 19px;
+}
+.title2:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 5px;
+	height: 2px;
+	background-color: #33b6d7;
+	margin-bottom: 13px;
+}
+.title2:after{
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 5px;
+	height: 2px;
+	background-color: #33b6d7;
+}
+.conditionul{
+	margin-bottom: 30px;
+}
+.conditionli{
+
+}
+.titleli{
+	font-size: 15px;
+	color: #fff;
+	line-height: 34px;
+	padding-top: 3px;
+}
+.listul{
+	margin-left: -5px;
+}
+.listul li{
+	min-width: 42px;
+	height: 22px;
+	border: 1px solid #00dcff;
+	text-align: center;
+	line-height: 22px;
+	font-size: 14px;
+	color: #33b6d7;
+	float: left;
+	cursor: pointer;
+	margin-left: 5px;
+	margin-bottom: 10px;
+	padding: 0 8px;
+}
+.listul li:hover,.listul li.active{
+	color: #fff;
+	background-color: #12758e;
+	border-color: #12758e;
+	cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+.listul li.input{
+	border: none;
+	background: none;
+	color: #33b6d7;
+}
+.listul li.input:hover{
+	background: none;
+	color: #33b6d7;
+}
+.listul li.input input{
+	background: none;
+	outline: none;
+	border: 1px solid #00dcff;
+	color: #33b6d7;
+	width: 74px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+.detailul{
+	display: none;
+	background-color: rgba(18,117,142,0.3);
+}
+.detailul li{
+	font-size: 14px;
+	line-height: 28px;
+	min-width: 44px;
+	padding: 0 8px;
+	color: #33b6d7;
+	text-align: center;
+	float: left;
+	margin-right: 5px;
+}
+
+.appbox{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 356px;
+}
+.appphone{
+	position: absolute;
+	left: 67px;
+	height: 100%;
+}
+.qrcodebox{
+	position: absolute;
+	left: 493px;
+	top: 70px;
+	width: 126px;
+	height: 132px;
+	padding-top: 12px;
+	background: url(../imgs/p2/codebg.png) no-repeat;
+	-webkit-background-size: 99% 99%;
+	background-size: 99% 99%;
+	text-align: center;
+}
+.qrcode{
+	width: 102px;
+	height: 101px;
+	vertical-align: top;
+}
+.qrcodebox p{
+	font-size: 12px;
+	color: #fff;
+	line-height: 24px;
+}
+
+.mainright{
+	width: 840px;
+	height: 800px;
+	position: absolute;
+	left: 1001px;
+	top: 126px;
+	overflow: hidden;
+	opacity: 0;
+	/*background: skyblue;*/
+}
+.carList{
+	width: 830px;
+}
+.carList li{
+	height: 199px;
+	border-bottom: 1px solid rgba(51,185,251,0.5);
+	position: relative;
+}
+.carList li:before{
+	content: '';
+	width: 5px;
+	height: 2px;
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	background-color: rgba(51,185,251,1);
+}
+.carList li:after{
+	content: '';
+	width: 5px;
+	height: 2px;
+	position: absolute;
+	right: 0;
+	bottom: -1px;
+	background-color: rgba(51,185,251,1);
+}
+.carimg{
+	width: 270px;
+	height: 180px;
+	box-sizing: border-box;
+	border: 1px solid #1cb1e3;
+	margin-top: 10px;
+}
+.carinfobox{
+	width: 534px;
+	padding-left: 26px;
+}
+.carname{
+	font-size: 18px;
+	line-height: 38px;
+	color: #fff;
+	margin-bottom: 13px;
+}
+.carinfo{
+	height: 100px;
+	font-size: 0;
+}
+.carinfo span{
+	font-size: 15px;
+	color: #33b6d7;
+	line-height: 25px;
+}
+.carinfo .mohao{
+	display: inline-block;
+	padding: 0 6px;
+	vertical-align: top;
+}
+.justifyl{
+	display: flex;
+	width: 60px;
+	justify-content: space-between;
+	font-size: 0;
+}
+.justifyr{
+	width: 460px;
+}
+.justifyr .address{
+	width: 440px;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.tosee{
+	display: inline-block;
+	padding: 0 30px;
+	height: 24px;
+	border: 1px solid #00c0ff;
+	text-align: center;
+	line-height: 24px;
+	font-size: 14px;
+	color: #33b6d7;
+}
+.tosee.active,.tosee:hover{
+	color: #fff;
+	background-color: #12758e;
+	border-color: #12758e;
+	cursor: pointer;
+}
+/* dialogbox */
+.dialogbox{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.dialog{
+	width: 980px;
+	height: 585px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -490px;
+	margin-top: -292.5px;
+	background: url(../imgs/p2/dailogbg.png) no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.dialimg{
+	width: 450px;
+	height: 300px;
+	box-sizing: border-box;
+	border:1px solid #00c0ff;
+	position: absolute;
+	left: 51px;
+	top: 120px;
+}
+.dialog .carinfobox{
+	position: absolute;
+	left: 501px;
+	top: 108px;
+	width: 440px;
+}
+.dialog .carname{
+	margin-bottom: 0;
+	font-size: 24px;
+}
+.carprice{
+	font-size: 27px;
+	line-height: 57px;
+	color: #fff;
+	font-family: 'DIN MEDIUM';
+}
+.dialog .carinfo span{
+	font-size: 18px;
+	line-height: 32px;
+}
+.dialog .justifyl{
+	width: 80px;
+}
+.dialog .justifyr{
+	width: 320px;
+}
+.dialog .justifyr .address{
+	-webkit-line-clamp: 3;
+	width: 300px;
+}
+.dialog .carinfo{
+	height: 191px;
+}
+.dialog .tosee{
+	padding-left:48px;
+	padding-right: 23px;
+	position: relative;
+}
+.dialog .tophone:before{
+	content: '';
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	left: 23px;
+	top: 50%;
+	margin-top: -9px;
+	background: url(../imgs/p2/dialicon1.png) no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.dialog .tophone.active:before,.dialog .tophone:hover:before{
+	background-image: url(../imgs/p2/dialicon1_act.png);
+}
+.dialog .toadd:before{
+	content: '';
+	width: 19px;
+	height: 18px;
+	position: absolute;
+	left: 23px;
+	top: 50%;
+	margin-top: -9px;
+	background: url(../imgs/p2/dialicon2.png) no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.dialog .toadd.active:before,.dialog .toadd:hover:before{
+	background-image: url(../imgs/p2/dialicon2_act.png);
+}
+.dailclose{
+	position: absolute;
+	right: 15px;
+	top: 30px;
+	width: 38px;
+	height: 38px;
+	background: url(../imgs/p2/dialclose.png) no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+.dailclose:hover{
+	background-image: url(../imgs/p2/dialclose_act.png);
+}
+
+/* barBox */
+.barBox{
+	width: 5px;
+	height: 100%;
+	position:absolute;
+	right: 0;
+	top: 0;
+	background-color: rgba(5,169,223,0.2);
+}
+.barItem{
+	position: absolute;
+	width: 5px;
+	background-color: #66ffff;
+}
+
+.dialogbox2{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.dialog2{
+	width: 580px;
+	height: 210px;
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -290px;
+	margin-top: -105px;
+	background-color: #33b6d7;
+}
+.dialog2p1{
+	position: absolute;
+	left: 180px;
+	top: 70px;
+	font-size: 24px;
+	color: #fff;
+	height: 30px;
+	line-height: 30px;
+}
+.dialog2p2{
+	position: absolute;
+	left: 180px;
+	top: 100px;
+	font-size: 18px;
+	color: #fff;
+	height: 24px;
+	line-height: 24px;
+}
+.dialogbox2 .dailclose{
+	top: 10px;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+}
+.dialog2 .allright{
+	width: 60px;
+	height: 60px;
+	background: url(../imgs/p2/allright.png) no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 100px;
+	top: 70px;
+}

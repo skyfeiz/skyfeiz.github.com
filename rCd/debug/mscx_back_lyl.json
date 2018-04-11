@@ -1,0 +1,41 @@
+{
+	"success": true,
+	"title": "能源利用率",
+	"data": [{
+		"name": "3月1日",
+		"value": 70
+	}, {
+		"name": "3月15日",
+		"value": 69
+	}, {
+		"name": "4月1日",
+		"value": 71
+	}, {
+		"name": "4月15日",
+		"value": 72
+	}, {
+		"name": "5月1日",
+		"value": 68
+	}, {
+		"name": "5月15日",
+		"value": 70
+	}, {
+		"name": "6月1日",
+		"value": 71
+	}, {
+		"name": "6月15日",
+		"value": 73
+	}, {
+		"name": "7月1日",
+		"value": 76
+	}, {
+		"name": "7月15日",
+		"value": 77
+	}, {
+		"name": "8月1日",
+		"value": 75
+	},{
+		"name": "8月15日",
+		"value": 78
+	}]
+}

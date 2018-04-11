@@ -1,0 +1,20 @@
+{
+	"success": true,
+	"title": "旧件回收比例提高举措",
+	"data": [{
+		"seriesName": "旧件台账",
+		"value": 45
+	}, {
+		"seriesName": "免返审核",
+		"value": 30
+	}, {
+		"seriesName": "回收确认",
+		"value": 10
+	}, {
+		"seriesName": "管理制度",
+		"value": 10
+	}, {
+		"seriesName": "物流保障",
+		"value": 5
+	}]
+}

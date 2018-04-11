@@ -1,0 +1,11 @@
+{
+	"success": true,
+	"title": "旧件回收比例(%)",
+	"data": [{
+		"seriesName": "传统模式",
+		"value": 48
+	}, {
+		"seriesName": "icsm上线后",
+		"value": 92
+	}]
+}

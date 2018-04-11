@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>共享经济</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/p2.css">
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/jquery_scrollBar.js"></script>
+    <script src="libs/controller.js"></script>
+    <script src="libs/wbchart.js"></script>
+    <script src="libs/TweenMax.min.js"></script>
+    <script src="libs/CustomEase.js"></script>
+<script type="text/javascript" src="js/charts.js"></script></head>
+
+<body>
+    <div class="root">
+        <div id="BG">
+            <img class="bgCover" src="imgs/p1/bgCover.jpg">
+            <img class="img1" src="imgs/p1/centerNut.png">
+            <img class="img2" src="imgs/p1/nut1.png">
+        </div>
+        <section class="toptitlebox">
+            <h2>共享经济</h2>
+        </section>
+        <section class="bottombox clearfix">
+            <a href="p1.html" class="fl">
+                <p>智能服务</p>
+            </a>
+            <a href="p2.html" class="fl active">
+                <p>共享经济</p>
+            </a>
+            <a href="p3.html" class="fl">
+                <p>模式创新</p>
+            </a>
+            <a href="p4.html" class="fl">
+                <p>研发辅助</p>
+            </a>
+        </section>
+
+        <section class="mainleft">
+            <p class="phonebox">
+                <span class="hotline">客服热线</span>
+                <span class="phone">4008681122</span>
+            </p>
+            <div class="searchbox clearfix">
+                <input type="text" class="searchinput fl" default-value="请输入您要找的设备类型，如挖掘机" />
+                <span class="searchbtn fl" id="searchbtn">查找设备</span>
+                <span class="searchbtn fl">上传设备</span>
+            </div>
+            <p class="title2">请选择筛选条件</p>
+            <ul class="conditionul">
+                <li class="conditionli">
+                    <p class="titleli">所在地区</p>
+                    <ul class="listul clearfix" data-type="areaData">
+                        <li>不限</li>
+                    </ul>
+                    <ul class="detailul clearfix"></ul>
+                </li>
+                <li class="conditionli">
+                    <p class="titleli">设备类型</p>
+                    <ul class="listul clearfix" data-type="typeData">
+                        <li>不限</li>
+                    </ul>
+                    <ul class="detailul clearfix"></ul>
+                </li>
+                <li class="conditionli">
+                    <p class="titleli">使用年限</p>
+                    <ul class="listul clearfix" data-type="yearData">
+                        <li>不限</li>
+                    </ul>
+                </li>
+                <li class="conditionli">
+                    <p class="titleli">租赁价格</p>
+                    <ul class="listul clearfix" data-type="priceData">
+                        <li>不限</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="appbox">
+                <img src="imgs/p2/zhaoshebei.png" alt="" class="appphone" />
+                <div class="qrcodebox">
+                    <img src="imgs/p2/qrcode.jpg" alt="" class="qrcode" />
+                    <p>找设备APP二维码</p>
+                </div>
+            </div>
+        </section>
+        <section class="mainright">
+            <<!-- ul class="carList">
+                <li>
+                    <img class="carimg fl" src="imgs/p2/car1.jpg" class="fl" alt="">
+                    <div class="carinfobox fl">
+                        <p class="carname">三一47泵车</p>
+                        <div class="carinfo">
+                            <div class="clearfix">
+                                <p class="justifyl fl">
+                                    <span>出</span>
+                                    <span>厂</span>
+                                    <span>年</span>
+                                    <span>份</span>
+                                </p>
+                                <p class="justifyr fl">
+                                    <span class="mohao">:</span>
+                                    <span>2016年</span>
+                                </p>
+                            </div>
+                            <div class="clearfix">
+                                <p class="justifyl fl">
+                                    <span>所</span>
+                                    <span>在</span>
+                                    <span>地</span>
+                                </p>
+                                <p class="justifyr fl">
+                                    <span class="mohao fl">:</span>
+                                    <span class="address fl">北京市顺义区李遂镇李木路</span>
+                                </p>
+                            </div>
+                            <div class="clearfix">
+                                <p class="justifyl fl">
+                                    <span>价</span>
+                                    <span>格</span>
+                                </p>
+                                <p class="justifyr fl">
+                                    <span class="mohao">:</span>
+                                    <span>面议</span>
+                                </p>
+                            </div>
+                        </div>
+                        <span class="tosee active">查看详情</span>
+                    </div>
+                </li>
+            </ul> -->
+        </section>
+        <section class="dialogbox">
+            <!-- <div class="dialog">
+                <img src="imgs/p2/dialimg1.jpg" class="dialimg" alt="" />
+                <div class="carinfobox fl">
+                    <p class="carname">三一47泵车</p>
+                    <p class="carprice">￥50000/月</p>
+                    <div class="carinfo">
+                        <div class="clearfix">
+                            <p class="justifyl fl">
+                                <span>设</span>
+                                <span>备</span>
+                                <span>品</span>
+                                <span>牌</span>
+                            </p>
+                            <p class="justifyr fl">
+                                <span class="mohao">:</span>
+                                <span>三一</span>
+                            </p>
+                        </div>
+                        <div class="clearfix">
+                            <p class="justifyl fl">
+                                <span>设</span>
+                                <span>备</span>
+                                <span>型</span>
+                                <span>号</span>
+                            </p>
+                            <p class="justifyr fl">
+                                <span class="mohao">:</span>
+                                <span>47米</span>
+                            </p>
+                        </div>
+                        <div class="clearfix">
+                            <p class="justifyl fl">
+                                <span>出</span>
+                                <span>厂</span>
+                                <span>年</span>
+                                <span>份</span>
+                            </p>
+                            <p class="justifyr fl">
+                                <span class="mohao">:</span>
+                                <span>2016年</span>
+                            </p>
+                        </div>
+                        <div class="clearfix">
+                            <p class="justifyl fl">
+                                <span>设</span>
+                                <span>备</span>
+                                <span>地</span>
+                                <span>址</span>
+                            </p>
+                            <p class="justifyr fl">
+                                <span class="mohao fl">:</span>
+                                <span class="address fl">北京市顺义区李遂镇李木路</span>
+                            </p>
+                        </div>
+                    </div>
+                    <span class="tosee tophone active">感兴趣，让对方联系我</span>
+                    <span class="tosee toadd">加入收藏</span>
+                </div>
+                <span class="dailclose"></span>
+            </div> -->
+        </section>
+        <section class="dialogbox2">
+            <div class="dialog2">
+                <span class="allright"></span>
+                <p class="dialog2p1">感兴趣已送达</p>
+                <p class="dialog2p2">对方已收到,请保持电话通畅</p>
+                <span class="dailclose"></span>
+            </div>
+        </section>
+    </div>
+    <script src="js/p2.js"></script>
+</body>
+
+</html>

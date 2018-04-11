@@ -1,0 +1,14 @@
+{
+	"success": true,
+	"title": "故障率 降低举措",
+	"data": [{
+		"name": "故障预警",
+		"value": 60
+	}, {
+		"name": "预测性维护",
+		"value": 30
+	}, {
+		"name": "规范操作",
+		"value": 10
+	}]
+}

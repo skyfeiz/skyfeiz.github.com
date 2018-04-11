@@ -1,0 +1,47 @@
+{
+	"success": true,
+	"title": "设备故障 率对比(‰)",
+	"data": [{
+		"seriesName": "物联预测性维护前",
+		"dataList": [{
+			"name": "1月",
+			"value": 21
+		}, {
+			"name": "2月",
+			"value": 20
+		}, {
+			"name": "3月",
+			"value": 19
+		}, {
+			"name": "4月",
+			"value": 18
+		}, {
+			"name": "5月",
+			"value": 20
+		}, {
+			"name": "6月",
+			"value": 21
+		}]
+	}, {
+		"seriesName": "物联预测性维护后",
+		"dataList": [{
+			"name": "1月",
+			"value": 9
+		}, {
+			"name": "2月",
+			"value": 8
+		}, {
+			"name": "3月",
+			"value": 8.6
+		}, {
+			"name": "4月",
+			"value": 9.1
+		}, {
+			"name": "5月",
+			"value": 8.8
+		}, {
+			"name": "6月",
+			"value": 8.9
+		}]
+	}]
+}
